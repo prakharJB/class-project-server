@@ -13,7 +13,9 @@ app.use(cors());
 
 app.use(require("./config/routes"));
 
-
+app.get("*", (req , res)=>{
+    res.sendFile(__dirname+"/index.html");
+})
 
 
 
